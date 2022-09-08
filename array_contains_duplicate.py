@@ -16,6 +16,6 @@ def array_contains_duplicate(nums):
 case1 = [1,2,3,1]
 case2 = [1,2,3,4]
 case3 = [1,1,1,3,3,4,3,2,4,2]
-print(case1, array_contains_duplicate(case1) is True)
-print(case2, array_contains_duplicate(case2) is False)
-print(case3, array_contains_duplicate(case3) is True)
+print(case1, "Pass" if array_contains_duplicate(case1) is True else "Fail")
+print(case2, "Pass" if array_contains_duplicate(case2) is False else "Fail")
+print(case3, "Pass" if array_contains_duplicate(case3) is True else "Fail")
