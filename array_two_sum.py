@@ -5,12 +5,12 @@ Given an array of integers nums and an integer target, return indices of the two
 
 def array_two_sum(nums, target):
   map = {}
-  for i in range(len(nums)):
-    diff = target - nums[i]
+  for i, num in enumerate(nums):
+    diff = target - num
     if diff in map:
       return [map[diff], i]
     else:
-      map[nums[i]] = i
+      map[num] = i
 
 
 # test cases
