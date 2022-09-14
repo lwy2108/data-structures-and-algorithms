@@ -16,6 +16,17 @@ def sliding_window_best_time_to_buy_and_sell_stock(prices):
   return max_profit
 
 
+def sliding_window_best_time_to_buy_and_sell_stock(prices):
+  max_profit = 0
+  l = 0
+  for r in range(1, len(prices)):
+    if prices[r] < prices[l]:
+      l = r
+    profit = prices[r] - prices[l]
+    max_profit = profit if profit > max_profit else max_profit
+  return max_profit
+
+
 # test cases
 prices1 = [7,1,5,3,6,4]
 prices2 = [7,6,4,3,1]
