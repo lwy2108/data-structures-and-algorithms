@@ -11,6 +11,22 @@ def two_pointers_valid_palindrome(s):
   return True
 
 
+def two_pointers_valid_palindrome(s):
+  l = 0
+  r = len(s) - 1
+  while l < r:
+    while s[l].isalnum() is False:
+      l += 1
+    while s[r].isalnum() is False:
+      r -= 1
+    if s[l].lower() != s[r].lower():
+      return False
+    else:
+      l += 1
+      r -= 1
+  return True
+
+
 # test cases
 s1 = "A man, a plan, a canal: Panama"
 s2 = "race a car"
