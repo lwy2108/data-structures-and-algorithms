@@ -15,15 +15,15 @@ def linked_list_reverse(head):
   
   
 def linked_list_reverse(head):
-  if not head:
-    return None
-  else:
-    last_node = head
-  if head.next:
-    last_node = linked_list_reverse(head.next)
-    head.next.next = head
-  head.next = None
-  return last_node
+  def reverse_nodes(curr, prev):
+    if curr is None:
+      return prev
+    else:
+      next = curr.next
+      curr.next = prev
+      return reverse_nodes(next, curr)
+
+  return reverse_nodes(head, None)
 
 
 # test cases
