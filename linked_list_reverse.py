@@ -12,6 +12,18 @@ def linked_list_reverse(head):
     head = head.next
   new_head.val = head.val
   return new_head
+  
+  
+def linked_list_reverse(head):
+  if not head:
+    return None
+  else:
+    last_node = head
+  if head.next:
+    last_node = linked_list_reverse(head.next)
+    head.next.next = head
+  head.next = None
+  return last_node
 
 
 # test cases
