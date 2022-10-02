@@ -9,7 +9,7 @@ def dp_memo_fib(n):  # T = O(2^n), S = O(n)
   return dp_memo_fib(n - 1) + dp_memo_fib(n - 2)
 
 
-def dp_memo_fib(n, memo={}):
+def dp_memo_fib(n, memo={}):  # T = O(n), S = O(n)
   if n in memo:
     return memo[n]
   if n <= 2:
