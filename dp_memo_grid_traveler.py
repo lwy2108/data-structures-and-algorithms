@@ -23,14 +23,10 @@ def dp_memo_grid_traveler(m, n, memo={}):  # T = O(m*n), S = O(m+n)
 
 
 # test cases
-m1 = 1
-n1 = 1
-m2 = 2
-n2 = 3
-m3 = 3
-n3 = 3
-m4 = 18
-n4 = 18
+m1, n1 = 1, 1
+m2, n2 = 2, 3
+m3, n3 = 3, 3
+m4, n4 = 18, 18
 print(m1, n1, "Pass" if dp_memo_grid_traveler(m1, n1) == 1 else "Fail")
 print(m2, n2, "Pass" if dp_memo_grid_traveler(m2, n2) == 3 else "Fail")
 print(m3, n3, "Pass" if dp_memo_grid_traveler(m3, n3) == 6 else "Fail")
