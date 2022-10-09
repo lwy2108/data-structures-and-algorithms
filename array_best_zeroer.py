@@ -1,5 +1,5 @@
 """
-Given an array A of size n, find the smallest int k that can zero out the array within m operations.
+Given an array A of size n, find the smallest int k that can zero out the array with at most m operations.
 
 Each operation is a subtraction of k from any item i in A, where the item is tranformed into max(0, i - k)
 """
