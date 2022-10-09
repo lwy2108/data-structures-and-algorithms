@@ -21,7 +21,7 @@ def array_best_zeroer(n, m, A):
 
 
 # test cases
-n = 3
-m = 9
-A = [2, 5, 6]
-print(n, m, A, "Pass" if array_best_zeroer(n, m, A) == 2 else "Fail")
+n1, m1, A1 = 3, 9, [2, 5, 6]
+n2, m2, A2 = 3, 4, [2, 3, 7]
+print(n1, m1, A1, "Pass" if array_best_zeroer(n1, m1, A1) == 2 else "Fail")
+print(n2, m2, A2, "Pass" if array_best_zeroer(n2, m2, A2) == 4 else "Fail")
