@@ -8,7 +8,7 @@ from math import ceil
 
 
 def array_best_zeroer(n, m, A):
-  k = 1
+  k = ceil(sum(A) / m)
   while True:
     counter = [0] * n
     for i in range(n):
