@@ -30,6 +30,6 @@ def array_decipher_smallest_sum(n, A):
 n1, A1 = 2, ["A1A", "B23"]
 n2, A2 = 3, ["B3B", "B235C", "A1C"]
 n3, A3 = 2, ["12A", "B23A4", "2C1"]
-print(n1, A1, "Pass" if array_decipher_smallest_sum(n1, A1) == ["111", "223"] else "Fail")
-print(n2, A2, "Pass" if array_decipher_smallest_sum(n2, A2) == ["131", "12353", "213"] else "Fail")
-print(n3, A3, "Pass" if array_decipher_smallest_sum(n3, A3) == ["122", "12324", "231"] else "Fail")
+print(n1, A1, "Pass" if array_decipher_smallest_sum(n1, A1.copy()) == ["111", "223"] else "Fail")
+print(n2, A2, "Pass" if array_decipher_smallest_sum(n2, A2.copy()) == ["131", "12353", "213"] else "Fail")
+print(n3, A3, "Pass" if array_decipher_smallest_sum(n3, A3.copy()) == ["122", "12324", "231"] else "Fail")
