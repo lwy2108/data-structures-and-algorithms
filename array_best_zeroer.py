@@ -20,6 +20,23 @@ def array_best_zeroer(n, m, A):
   return k
 
 
+def array_best_zeroer(n, m, A):
+  l, r = 1, max(A)
+  res = r
+  while l <= r:
+    k = (l + r) // 2
+    ops = 0
+    for x in A:
+      ops += ceil(x / k)
+      if ops > m:
+        l = k + 1
+        break
+    if ops <= m:
+      res = min(res, k)
+      r = k - 1
+  return res
+
+
 # test cases
 n1, m1, A1 = 3, 9, [2, 5, 6]
 n2, m2, A2 = 3, 4, [2, 3, 7]
