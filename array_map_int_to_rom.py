@@ -4,46 +4,46 @@ Given an integer, return it as a roman numeral.
 
 
 def array_map_int_to_rom(num):
-    ints = [
-        1000,
-        900,
-        500,
-        400,
-        100,
-        90,
-        50,
-        40,
-        10,
-        9,
-        5,
-        4,
-        1
-    ]
+  ints = [
+    1000,
+    900,
+    500,
+    400,
+    100,
+    90,
+    50,
+    40,
+    10,
+    9,
+    5,
+    4,
+    1
+  ]
 
-    roms = [
-        'M',
-        'CM',
-        'D',
-        'CD',
-        'C',
-        'XC',
-        'L',
-        'XL',
-        'X',
-        'IX',
-        'V',
-        'IV',
-        'I'
-    ]
+  roms = [
+    'M',
+    'CM',
+    'D',
+    'CD',
+    'C',
+    'XC',
+    'L',
+    'XL',
+    'X',
+    'IX',
+    'V',
+    'IV',
+    'I'
+  ]
 
-    res = ""
+  res = ""
 
-    for i in range(len(ints)):
-        count = num // ints[i]
-        num -= count * ints[i]
-        res += count * roms[i]
+  for i in range(len(ints)):
+    count = num // ints[i]
+    num -= count * ints[i]
+    res += count * roms[i]
 
-    return res
+  return res
   
   
 # test cases
